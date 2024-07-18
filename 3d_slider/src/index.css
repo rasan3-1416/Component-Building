@@ -1,0 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --poppins: "Poppins", sans-serif;
+        --rubik: "ICA Rubik", sans-serif;
+
+        --grayColor: #D2D2D2;
+        --darkGrayColor: #9F9FA5;
+
+        --s: 124px; /* control the size*/
+        --c1: #bebec580;
+        --c2:#D2D2D2;
+        
+        --_g: #0000 90deg,var(--c1) 0;
+    }
+    body{
+        background-color: var(--grayColor);
+        background: 
+              conic-gradient(from 90deg at 1px 1px,var(--_g)),
+              conic-gradient(from 90deg at 1px 1px,var(--_g)), var(--c2);
+        background-size: var(--s) var(--s), calc(var(--s)/1) calc(var(--s)/1);
+    }
+}
